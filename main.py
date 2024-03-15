@@ -2,12 +2,12 @@ import requests,base64,io,time,datetime,os
 
 def Main():
 	Imgsetting = {
-	"prompt": "(masterpiece:1.1),(best quality:1.0),(super fine cel anime:1.2),cute girl,blouse,no background,flat background",
-	"negative_prompt":"(worst quality, low quality:1.2),ugly,error,lowres,blurry,multipul angle, split view, grid view,text,signature,watermark,bad anatomy",
-	"steps": 20,
+	"prompt": "score_9,score_8_up,score_7_up BREAK source_anime,rating_explicit,(best quality, masterpiece, uncensored, high quality, ultra detailed, extremely detailed CG, beautiful face, beautiful eyes, beautiful hair, kawaii:1.2),1girl,solo,long hair,green hair,blue eyes,tanned skin,small breasts,(Sneakers,sportswear,Flat cap),desert island,in the morning,arms up behind,upper body shot",
+	"negative_prompt":"(zPDXL,score_4,score_5,score_6,source_pony,source_furry,source_cartoon,lowres,bad anatomy,bad hands,censored,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,artist name,messy color,deformed fingers,bad,distracted,hyper realistic),(nsfw,nude)",
+	"steps": 30,
 	"sampler_index":"DPM++ 2M Karras",
-	"width": 256,
-	"height": 384,
+	"width": 1024,
+	"height": 1024,
 	"cfg_scale": 7,
 	"seed": -1,
 	}
