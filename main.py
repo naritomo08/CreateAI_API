@@ -6,12 +6,12 @@ def Main():
 	"negative_prompt":"(zPDXL,score_4,score_5,score_6,source_pony,source_furry,source_cartoon,lowres,bad anatomy,bad hands,censored,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,artist name,messy color,deformed fingers,bad,distracted,hyper realistic),(nsfw,nude)",
 	"steps": 30,
 	"sampler_index":"DPM++ 2M Karras",
-	"width": 512,
-	"height": 512,
+	"width": 1024,
+	"height": 1024,
 	"cfg_scale": 7,
 	"seed": -1,
 	}
-	resp = requests.post(url=f'http://127.0.0.1:7860/sdapi/v1/txt2img', json=Imgsetting)
+	resp = requests.post(url=f'http://192.168.11.33:7860/sdapi/v1/txt2img', json=Imgsetting)
 	json = resp.json()
 	imgdata = json["images"][0]
 	
