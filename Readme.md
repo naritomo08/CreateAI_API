@@ -1,5 +1,103 @@
 # CreateAI_API
 
-## command
+StableDiffusionから画像を入手するプログラムになります。
 
-python3 main.py
+## 参考URL
+
+[Stable Diffusion (AUTOMATIC1111) をAPIで操作する ～WEB UI不要で任意のサービスと連携～](https://note.com/rcat999/n/n1beb8d75d334#549b1d65-7771-4478-9578-af0377abb956)
+
+## 事前作業
+
+以下のサイトを参考にローカルPCへStableDiffusionを導入する。
+
+[https://soroban.highreso.jp/article/article-036](https://soroban.highreso.jp/article/article-036)
+
+[Stable Diffusionでアニメ系美少女を作る方法！呪文(プロンプト)やモデルも](https://romptn.com/article/6236)
+
+* RTX3060導入WindowsPC利用をおすすめします。
+* あらかじめローカルで操作方法の理解をすることをおすすめします。
+
+[【Stable Diffusion】API経由で画像を大量に生成する方法](https://product.plex.co.jp/entry/stable-diffusion-via-api)
+
+* Stable Diffusion web UI を起動するの起動オプションに"--api"をつける。
+
+[ローカルネットワーク上のAUTOMATIC1111に別マシンからアクセスする](https://qiita.com/kume_negitoro/items/2e4f667cf6e0aee9fab4)
+
+* Stable Diffusion web UI を起動するの起動オプションに"--listen"をつける。
+
+## 使用方法
+
+事前作業ができればどこのPCから操作しても問題ありません。
+
+python,requestsを導入しておくこと。
+
+[Pythonのインストール方法](https://www.klv.co.jp/corner/python-opencv-python-install.html)
+
+[【Python】Requestsをインストールする方法](https://pg-chain.com/python-requests-install)
+
+### ソース入手
+
+以下のgitコマンドで入手する。
+
+```bash
+git clone https://github.com/naritomo08/CreateAI_API.git
+cd CreateAI
+rm -rf .git
+```
+
+### URL設定
+
+以下のファイルを開き、最初にある以下の行のIPアドレスをStableDiffusionが動いているPCIPに変更する。
+
+```bash
+vi create.py
+vi model_check.py
+
+[text](create.py)
+→上記のIPアドレスを変更する。
+```
+
+### 利用モデル確認
+
+以下のコマンドを入力し、モデル情報を確認する。
+
+```bash
+python3 model_check.py
+cat model_check.py
+cat output/sd_model.txt
+→使用するモデルの行を控える。
+```
+
+### 画像生成プログラム準備
+
+以下のコマンドを入力し、準備を行う。
+
+```bash
+vi create.py
+
+model = "モデル名"
+→前の手順で控えたモデル名を貼り付ける。
+
+Imgsetting = {
+	"prompt": "score_9,score_8_up,score_7_up BREAK source_anime,rating_explicit,(best quality, masterpiece, uncensored, high quality, ultra detailed, extremely detailed CG, beautiful face, beautiful eyes, beautiful hair, kawaii:1.2),1girl,solo,long hair,green hair,blue eyes,tanned skin,beach,at midnight,arms up behind,kind_smile,portrait,medium breasts,casual",
+	"negative_prompt":"(zPDXL,score_4,score_5,score_6,source_pony,source_furry,source_cartoon,lowres,bad anatomy,bad hands,censored,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,artist name,messy color,deformed fingers,bad,distracted,hyper realistic),nsfw,nude",
+	"steps": 30,
+	"sampler_index":"DPM++ 2M Karras",
+	"width": 1024,
+	"height": 1024,
+	"cfg_scale": 7,
+	"seed": -1,
+	}
+→必要に応じ、上記生成パラメータを変更する。
+```
+
+### 画像生成プログラム稼働
+
+以下のコマンドを入力し、モデル情報を確認する。
+
+```bash
+python3 model_check.py
+cat model_check.py
+ls output/yyyy-mm-dd/
+→画像ファイルが出力されていることを確認する。
+```
