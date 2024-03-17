@@ -8,14 +8,21 @@ StableDiffusionから画像を入手するプログラムになります。
 
 ## 事前作業
 
-以下のサイトを参考にローカルPCへStableDiffusionを導入する。
+以下のサイトを参考にローカルPCまたはGoogleColabへStableDiffusionを導入する。
+リモートPCにもいれることもおすすめします。
 
-[https://soroban.highreso.jp/article/article-036](https://soroban.highreso.jp/article/article-036)
+[【Stable Diffusion Web UI】Windowsにダウンロード・インストールする方法](https://soroban.highreso.jp/article/article-036)
+
+[【Stable Diffusion Web UI】Macダウンロード・インストールする方法](https://soroban.highreso.jp/article/article-037)
+
+[【Stable Diffusion Web UI】GoogleColabダウンロード・インストールする方法](https://soroban.highreso.jp/article/article-037)
+
+* Proへの加入が必要(月1179円必要になります。)
 
 [Stable Diffusionでアニメ系美少女を作る方法！呪文(プロンプト)やモデルも](https://romptn.com/article/6236)
 
-* RTX3060導入WindowsPC利用をおすすめします。
-* あらかじめローカルで操作方法の理解をすることをおすすめします。
+* RTX3060導入WindowsPCまたはM1mac利用をおすすめします。
+* あらかじめここで操作方法の理解をすることをおすすめします。
 
 [【Stable Diffusion】API経由で画像を大量に生成する方法](https://product.plex.co.jp/entry/stable-diffusion-via-api)
 
@@ -101,3 +108,13 @@ cat model_check.py
 ls output/yyyy-mm-dd/
 →画像ファイルが出力されていることを確認する。
 ```
+
+### おまけ
+
+画像生成してくると、絵の構図を変えずに服装など変えたくなる場合、
+seed値を取得したくなるかと思いますが、簡単な方法として
+ローカルPCにStableDiffusionを入れて作成した画像のSeed値が確認できます。
+
+画像生成しなければ特に低スペックPCでも問題ありません。
+
+[Stable DiffusionでSeedの使い方について分かりやすく解説！](https://ai-illust-kouryaku.com/?p=4000#index_id1)
