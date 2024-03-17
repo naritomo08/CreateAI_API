@@ -2,10 +2,10 @@ import requests,base64,io,time,datetime,os
 
 def Main():
     # StableDiffusionURL
-	url = "http://192.168.11.33:7860"
+	url = "http://IPアドレス:7860"
 
 	# model select
-	model = "ebara_pony_1.safetensors [3c33e4d504]"
+	model = "モデル名"
 	option_payload = {
     	"sd_model_checkpoint": model,
     	# "CLIP_stop_at_last_layers": 2

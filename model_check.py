@@ -1,7 +1,7 @@
 import requests
 from pprint import pprint
 
-url = "http://192.168.11.33:7860"
+url = "http://IPアドレス:7860"
 
 sd_models = requests.get(f"{url}/sdapi/v1/sd-models").json()
 

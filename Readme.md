@@ -60,7 +60,7 @@ rm -rf .git
 vi create.py
 vi model_check.py
 
-[text](create.py)
+url = "http://IPアドレス:7860"
 →上記のIPアドレスを変更する。
 ```
 
@@ -113,7 +113,7 @@ ls output/yyyy-mm-dd/
 
 画像生成してくると、絵の構図を変えずに服装など変えたくなる場合、
 seed値を取得したくなるかと思いますが、簡単な方法として
-ローカルPCにStableDiffusionを入れて作成した画像のSeed値が確認できます。
+リモートPCにStableDiffusionを入れて作成した画像のSeed値が確認できます。
 
 画像生成しなければ特に低スペックPCでも問題ありません。
 
