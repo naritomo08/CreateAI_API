@@ -9,7 +9,6 @@ StableDiffusionから画像を入手するプログラムになります。
 ## 事前作業
 
 以下のサイトを参考にローカルPCまたはGoogleColabへStableDiffusionを導入する。
-リモートPCにもいれることもおすすめします。
 
 [【Stable Diffusion Web UI】Windowsにダウンロード・インストールする方法](https://soroban.highreso.jp/article/article-036)
 
@@ -86,8 +85,8 @@ model = "モデル名"
 →前の手順で控えたモデル名を貼り付ける。
 
 Imgsetting = {
-	"prompt": "score_9,score_8_up,score_7_up BREAK source_anime,rating_explicit,(best quality, masterpiece, uncensored, high quality, ultra detailed, extremely detailed CG, beautiful face, beautiful eyes, beautiful hair, kawaii:1.2),1girl,solo,long hair,green hair,blue eyes,tanned skin,beach,at midnight,arms up behind,kind_smile,portrait,medium breasts,casual",
-	"negative_prompt":"(zPDXL,score_4,score_5,score_6,source_pony,source_furry,source_cartoon,lowres,bad anatomy,bad hands,censored,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,artist name,messy color,deformed fingers,bad,distracted,hyper realistic),(nsfw,nude,nippless,public hair,revealing clothes,bed,on bed,bed room,private parts,take off clothes),
+	"prompt": "score_9,score_8_up,score_7_up BREAK source_anime,rating_explicit,(best quality, masterpiece, uncensored, high quality, ultra detailed, extremely detailed CG, beautiful face, beautiful eyes, beautiful hair, kawaii:1.2),1girl,solo,long hair,green hair,blue eyes,tanned skin,beach,at midnight,arms up behind,kind_smile,portrait,medium breasts,shirt",
+	"negative_prompt":"(zPDXL,score_4,score_5,score_6,source_pony,source_furry,source_cartoon,lowres,bad anatomy,bad hands,censored,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,artist name,messy color,deformed fingers,bad,distracted,hyper realistic),nsfw,nude",
 	"steps": 30,
 	"sampler_index":"DPM++ 2M Karras",
 	"width": 1024,
@@ -112,13 +111,14 @@ ls output/yyyy-mm-dd/
 
 画像生成してくると、絵の構図を変えずに服装など変えたくなる場合、
 seed値を取得したくなるかと思いますが、簡単な方法として
-リモートPCにStableDiffusionを入れて作成した画像のSeed値が確認できます。
+ブラウザで"https://ローカルIP:7860"に移動して生成AI
+Web画面から確認できます。
 
-画像生成しなければ特に低スペックPCでも問題ありません。
+ただし、PNGファイルでのみ可能。
 
 [Stable DiffusionでSeedの使い方について分かりやすく解説！](https://ai-illust-kouryaku.com/?p=4000#index_id1)
 
-## PNGからjpgへの変換
+## PNGからｊｐｇへの変換
 
 PNGだとファイル容量が大きいため、JPEGへ変換したい際は以下の手順で変換できる。
 
@@ -130,6 +130,8 @@ pip3 install pillow
 
 変換したいファイルをoutput/pngフォルダへ保管する。
 
+変換を実施すると元ファイルを削除してしまうため注意。
+
 以下のコマンドを入力し変換を行う。
 
 ```bash
@@ -138,7 +140,7 @@ ls output/jpg
 →変換した画像ファイルが出力されていることを確認する。
 ```
 
-## script list(参考)
+## script lisｔ(参考)
 
 pronpt
 
