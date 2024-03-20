@@ -100,11 +100,10 @@ Imgsetting = {
 
 ### 画像生成プログラム稼働
 
-以下のコマンドを入力し、モデル情報を確認する。
+以下のコマンドを入力し、画像生成する。
 
 ```bash
-python3 model_check.py
-cat model_check.py
+python3 create.py
 ls output/yyyy-mm-dd/
 →画像ファイルが出力されていることを確認する。
 ```
