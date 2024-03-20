@@ -1,8 +1,6 @@
 import requests
 from pprint import pprint
 
-# pprint(sd_models)
-
 def Main():
 
     with open("output/sd_model.txt", '+w', encoding='UTF-8') as f:
