@@ -1,4 +1,4 @@
 output/*
 !output/.gitkeep
-!jpg/.gitkeep
-!png/.gitkeep
+!output/jpg/.gitkeep
+!output/png/.gitkeep
