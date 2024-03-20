@@ -108,7 +108,7 @@ ls output/yyyy-mm-dd/
 →画像ファイルが出力されていることを確認する。
 ```
 
-### おまけ
+## 絵の構図を変えずに細かい状態を変えたい場合
 
 画像生成してくると、絵の構図を変えずに服装など変えたくなる場合、
 seed値を取得したくなるかと思いますが、簡単な方法として
@@ -117,3 +117,44 @@ seed値を取得したくなるかと思いますが、簡単な方法として
 画像生成しなければ特に低スペックPCでも問題ありません。
 
 [Stable DiffusionでSeedの使い方について分かりやすく解説！](https://ai-illust-kouryaku.com/?p=4000#index_id1)
+
+## PNGからｊｐｇへの変換
+
+PNGだとファイル容量が大きいため、JPEGへ変換したい際は以下の手順で変換できる。
+
+以下のコマンドで必要モジュールを導入する。
+
+```bash
+pip3 install pillow
+```
+
+変換したいファイルをoutput/pngフォルダへ保管する。
+
+以下のコマンドを入力し変換を行う。
+
+```bash
+python3 convert_jpg.py
+ls output/jpg
+→変換した画像ファイルが出力されていることを確認する。
+```
+
+## script lisｔ(参考)
+
+pronpt
+
+```bash
+立ち絵、上半身 1024X1024
+
+(score_9,score_8_up,score_7_up BREAK source_anime,rating_explicit),(best quality, masterpiece, uncensored, high quality, ultra detailed, extremely detailed CG, beautiful face, beautiful eyes, beautiful hair, kawaii),1girl,long hair,green hair,blue eyes,tanned skin,beach,arms up behind,kind_smile,portrait,medium breasts,black o-ring_bikini
+
+立ち絵、全身 640X1534
+
+(score_9,score_8_up,score_7_up BREAK source_anime,rating_explicit),(best quality, masterpiece, uncensored, high quality, ultra detailed,extremely detailed CG,beautiful face, beautiful eyes, beautiful hair, kawaii),1girl,blue hair,long hair,straight hair,red eyes,longeyelashes,drooping eyes,medium breasts,frontview,full_shot,kind_smile,arms_behind_back,school_uniform
+```
+
+negative pronpt
+
+```bash
+/* base */,
+(zPDXL,score_4,score_5,score_6,source_pony,source_furry,source_cartoon,lowres,bad anatomy,bad hands,censored,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,artist name,messy color,deformed fingers,bad,distracted,hyper realistic),(nsfw,nude,nippless,public hair,revealing clothes,bed,on bed,bed room,private parts,take off clothes),
+```
