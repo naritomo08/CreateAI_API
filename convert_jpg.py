@@ -4,7 +4,7 @@
 import os, glob
 from PIL import Image
 
-def main():
+def Main():
     filepath_list = glob.glob(input_path + '/*.png') # .pngファイルをリストで取得する
     for filepath in filepath_list:
         basename  = os.path.basename(filepath) # ファイルパスからファイル名を取得
@@ -22,4 +22,4 @@ if __name__ == '__main__':
     out_path = './output/jpg' # 変換先のフォルダを指定
     flag_delete_original_files = True # 元ファイルを削除する場合は、True指定
 
-    main()
+    Main()
