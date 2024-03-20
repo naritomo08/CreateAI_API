@@ -118,7 +118,7 @@ seed値を取得したくなるかと思いますが、簡単な方法として
 
 [Stable DiffusionでSeedの使い方について分かりやすく解説！](https://ai-illust-kouryaku.com/?p=4000#index_id1)
 
-## PNGからｊｐｇへの変換
+## PNGからjpgへの変換
 
 PNGだとファイル容量が大きいため、JPEGへ変換したい際は以下の手順で変換できる。
 
@@ -138,7 +138,7 @@ ls output/jpg
 →変換した画像ファイルが出力されていることを確認する。
 ```
 
-## script lisｔ(参考)
+## script list(参考)
 
 pronpt
 
