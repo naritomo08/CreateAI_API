@@ -1,6 +1,6 @@
 # CreateAI_API
 
-StableDiffusionから画像を入手するプログラムになります。
+StableDiffusionから画像を入手するプログラムになります
 
 ## 参考URL
 
