@@ -1,6 +1,6 @@
 # CreateAI_API
 
-StableDiffusionから画像を入手するプログラムになります。
+StableDiffusionから画像を入手するプログラムになります
 
 ## 参考URL
 
@@ -8,7 +8,7 @@ StableDiffusionから画像を入手するプログラムになります。
 
 ## 事前作業
 
-以下のサイトを参考にローカルPCまたはGoogleColabへStableDiffusionを導入する。
+以下のサイトを参考にローカルPCまたはGoogleColabへStableDiffusionを導入する
 
 [【Stable Diffusion Web UI】Windowsにダウンロード・インストールする方法](https://soroban.highreso.jp/article/article-036)
 
@@ -16,26 +16,26 @@ StableDiffusionから画像を入手するプログラムになります。
 
 [【Stable Diffusion Web UI】GoogleColabダウンロード・インストールする方法](https://soroban.highreso.jp/article/article-037)
 
-* Proへの加入が必要(月1179円必要になります。)
+* Proへの加入が必要(月1179円必要になります)
 
 [Stable Diffusionでアニメ系美少女を作る方法！呪文(プロンプト)やモデルも](https://romptn.com/article/6236)
 
-* RTX3060導入WindowsPCまたはM1mac利用をおすすめします。
-* あらかじめここで操作方法の理解をすることをおすすめします。
+* RTX3060導入WindowsPCまたはM1mac利用をおすすめします
+* あらかじめここで操作方法の理解をすることをおすすめします
 
 [【Stable Diffusion】API経由で画像を大量に生成する方法](https://product.plex.co.jp/entry/stable-diffusion-via-api)
 
-* Stable Diffusion web UI を起動するの起動オプションに"--api"をつける。
+* Stable Diffusion web UI を起動するの起動オプションに"--api"をつける
 
 [ローカルネットワーク上のAUTOMATIC1111に別マシンからアクセスする](https://qiita.com/kume_negitoro/items/2e4f667cf6e0aee9fab4)
 
-* Stable Diffusion web UI を起動するの起動オプションに"--listen"をつける。
+* Stable Diffusion web UI を起動するの起動オプションに"--listen"をつける
 
 ## 使用方法
 
-事前作業ができればどこのPCから操作しても問題ありません。
+事前作業ができればどこのPCから操作しても問題ありません
 
-python,requestsを導入しておくこと。
+python,requestsを導入しておくこと
 
 [Pythonのインストール方法](https://www.klv.co.jp/corner/python-opencv-python-install.html)
 
@@ -53,7 +53,7 @@ rm -rf .git
 
 ### URL設定
 
-以下のファイルを開き、最初にある以下の行のIPアドレスをStableDiffusionが動いているPCIPに変更する。
+以下のファイルを開き、最初にある以下の行のIPアドレスをStableDiffusionが動いているPCIPに変更する
 
 ```bash
 vi create.py
@@ -65,7 +65,7 @@ url = "http://IPアドレス:7860"
 
 ### 利用モデル確認
 
-以下のコマンドを入力し、モデル情報を確認する。
+以下のコマンドを入力し、モデル情報を確認する
 
 ```bash
 python3 model_check.py
@@ -76,13 +76,13 @@ cat output/sd_model.txt
 
 ### 画像生成プログラム準備
 
-以下のコマンドを入力し、準備を行う。
+以下のコマンドを入力し、準備を行う
 
 ```bash
 vi create.py
 
 model = "モデル名"
-→前の手順で控えたモデル名を貼り付ける。
+→前の手順で控えたモデル名を貼り付ける
 
 Imgsetting = {
 	"prompt": "score_9,score_8_up,score_7_up BREAK source_anime,rating_explicit,(best quality, masterpiece, uncensored, high quality, ultra detailed, extremely detailed CG, beautiful face, beautiful eyes, beautiful hair, kawaii:1.2),1girl,solo,long hair,green hair,blue eyes,tanned skin,beach,at midnight,arms up behind,kind_smile,portrait,medium breasts,shirt",
@@ -94,7 +94,7 @@ Imgsetting = {
 	"cfg_scale": 7,
 	"seed": -1,
 	}
-→必要に応じ、上記生成パラメータを変更する。
+→必要に応じ、上記生成パラメータを変更する
 ```
 
 ### 画像生成プログラム稼働
