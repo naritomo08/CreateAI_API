@@ -35,6 +35,7 @@ def Main():
 
 	os.makedirs(dir_for_output, exist_ok=True)
 
+	# Capture Create
 	with open(f"{dir_for_output}/{current_time}-{int(time.time())}.png", "wb") as f:
 		buf = base64.b64decode(imgdata)
 		f.write(buf)
