@@ -1,4 +1,4 @@
-import requests,base64,io,time,datetime,os
+import requests,base64,datetime,os,sys
 
 def Main():
     # StableDiffusionURL
@@ -27,19 +27,44 @@ def Main():
 	resp = requests.post(url=f'{url}/sdapi/v1/txt2img', json=Imgsetting)
 	json = resp.json()
 	imgdata = json["images"][0]
-	
+
 	now = datetime.datetime.now()
 	current_day = now.strftime("%Y-%m-%d")
-	current_time = now.strftime("%H-%M")
-	dir_for_output = "./output/" + current_day
+	current_daytime = now.strftime("%Y%M%H%M%S")
+	dir_for_output = "./output/R18/" + current_day
 
 	os.makedirs(dir_for_output, exist_ok=True)
 
-	# Capture Create
-	with open(f"{dir_for_output}/{current_time}-{int(time.time())}.png", "wb") as f:
+	with open(f"{dir_for_output}/{current_daytime}.png", "wb") as f:
 		buf = base64.b64decode(imgdata)
 		f.write(buf)
 	return
 
 if __name__ == '__main__':
-	Main()
+	
+	# 引数確認
+	i = 0
+	if (len(sys.argv) == 2):
+		args = sys.argv
+		n = args[1]
+		if(n.isdigit() == False):
+			n = 1
+		else:
+			n = int(n)
+	else:
+		n = 1
+	
+	print("作成画像は{}枚です。".format(n))
+
+	# 繰り返し処理
+	while i < n:
+
+		if (i < n):
+			gazou = n - i
+			print("画像はあと{}枚です。".format(gazou))
+
+		Main()
+
+		i = i + 1
+
+	print("画像作成完了しました。")

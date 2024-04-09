@@ -102,7 +102,10 @@ Imgsetting = {
 以下のコマンドを入力し、画像生成する
 
 ```bash
-python3 create.py
+vi create.py (出力したい画像枚数)
+
+指定しない場合1枚出力されます。
+
 ls output/yyyy-mm-dd/
 →画像ファイルが出力されていることを確認する
 ```
