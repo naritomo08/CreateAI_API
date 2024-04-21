@@ -31,6 +31,10 @@ StableDiffusionから画像を入手するプログラムになります。
 
 * Stable Diffusion web UI を起動するの起動オプションに"--listen"をつける。
 
+[Stable Diffusionの新モデル『SDXL』の使い方！導入方法も紹介](https://romptn.com/article/9688)
+
+* Stable Diffusion XL(高解像度画像生成AI)使用方法になります。
+
 ## 使用方法
 
 事前作業ができればどこのPCから操作しても問題ありません。
@@ -84,7 +88,7 @@ cat sd_vae.txt
 ```bash
 vi script_SD/base.py
 vi script_SDXL/base.py
-→StableDiffusion(SD)用、StableDiffusion(SD)用でそれぞれ作成する。
+→StableDiffusion(SD)用、StableDiffusionXL(SDXL)用でそれぞれ編集する。
 
 url = "http://IPアドレス:7860"
 →IPアドレスはStableDiffusionが動いているPCのIPを指定すること。
