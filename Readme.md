@@ -56,7 +56,7 @@ rm -rf .git
 以下のファイルを開き、最初にある以下の行のIPアドレスをStableDiffusionが動いているPCIPに変更する。
 
 ```bash
-vi create.py
+vi vae_check.py
 vi model_check.py
 
 url = "http://IPアドレス:7860"
