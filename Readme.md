@@ -102,7 +102,7 @@ modelname = "モデル名(ファイル名に記載する適当なモデル名)"
 
 script = "(score_9, score_8_up, score_7_up, BREAK source_anime, rating_explicit), (best quality, masterpiece, uncensored, high quality, ultra detailed, extremely detailed CG,beautiful face, beautiful eyes, beautiful hair, kawaii),(1girl,solo), blue hair,long hair,straight hair,red eyes,long eyelashes,drooping eyes,mediun breasts,school_uniform,skirt,street,full body,standing"
 
-negative = "(zPDXL,score_4,score_5,score_6,source_pony),(source_furry,source_cartoon,lowres,bad anatomy,bad hands,censored,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,artist name,messy color,deformed fingers,bad,distracted,hyper realistic),(nsfw,nude,nippless,public hair,revealing clothes,bed,on bed,bed room,private parts,take off clothes),asuna \(blue archive\), blue archive"
+negative = "(zPDXL,score_4,score_5,score_6,source_pony),(source_furry,source_cartoon,lowres,bad anatomy,bad hands,censored,text,error,missing fingers,extra digit,fewer digits,cropped,worst quality,low quality,normal quality,jpeg artifacts,signature,watermark,username,blurry,artist name,messy color,deformed fingers,bad,distracted,hyper realistic),(nsfw,nude,nippless,public hair,revealing clothes,bed,on bed,bed room,private parts,take off clothes)"
 
 →必要に応じ、上記生成パラメータを変更する。
 
