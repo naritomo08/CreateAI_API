@@ -8,7 +8,7 @@ def Main():
 	url = g.url
 
 	option_payload = {
-		"sd_model_checkpoint": model,
+		"sd_model_checkpoint": g.model,
 		"sd_vae": g.vae,
 	}
 
@@ -38,7 +38,7 @@ def Main():
 
 	os.makedirs(dir_for_output, exist_ok=True)
 
-	with open(f"{dir_for_output}/SDXL-{modelname}-{current_daytime}.png", "wb") as f:
+	with open(f"{dir_for_output}/SDXL-{g.modelname}-{current_daytime}.png", "wb") as f:
 		buf = base64.b64decode(imgdata)
 		f.write(buf)
 	return
