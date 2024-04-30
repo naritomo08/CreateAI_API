@@ -3,3 +3,4 @@ output/*
 !output/jpg/.gitkeep
 !output/png/.gitkeep
 __pycache__
+.DS_Store
