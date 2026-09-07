@@ -155,3 +155,7 @@ python3 convert_jpg.py
 ls output/jpg
 →変換した画像ファイルが出力されていることを確認する。
 ```
+
+## 関連Qiita記事
+
+- [StableDiffusion APIから画像生成してみる。](https://qiita.com/naritomo08/items/c521f1b338489bdf9ee8)
